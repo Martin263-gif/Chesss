@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace daw
 {
@@ -27,7 +29,7 @@ namespace daw
 
             playerBlack = new GameObject[]
             {
-                Create("black_rook", 0, 7), Create("black_knight", 1, 7), Create("black_bishop", 2, 7), Create("black_queen", 3, 7), Create("black_king", 4, 7), Create("black_bishop", 5, 7), Create("black_knight",    6, 7), Create("black_rook",7, 7), Create("black_pawn", 1, 6), Create("white_pawn", 2, 6), Create("white_pawn", 3, 6), Create("white_pawn", 4, 6), Create("white_pawn", 0, 6), Create("white_pawn", 5, 6), Create("white_pawn", 6, 6), Create("white_pawn",7,6) 
+                Create("black_rook", 0, 7), Create("black_knight", 1, 7), Create("black_bishop", 2, 7), Create("black_queen", 3, 7), Create("black_king", 4, 7), Create("black_bishop", 5, 7), Create("black_knight",    6, 7), Create("black_rook",7, 7), Create("black_pawn", 1, 6), Create("black_pawn", 2, 6), Create("black_pawn", 3, 6), Create("black_pawn", 4, 6), Create("black_pawn", 0, 6), Create("black_pawn", 5, 6), Create("black_pawn", 6, 6), Create("black_pawn",7,6) 
             };
 
             for (int i = 0; i < playerBlack.Length; i++)
@@ -74,6 +76,19 @@ namespace daw
             return true;
         }
 
+        public string GetCurrentPlayer()
+        {
+            return currentPlayer;
+        }
+
+        public bool IsGameOver()
+        {
+            return gameOver;
+        }
+
+        }
+
+        
 
 
 
@@ -81,17 +96,19 @@ namespace daw
 
 
 
-
-
-
-
-
-
-
-
-
-
-        // Update is called once per frame
-
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+    // Update is called once per frame
+
+

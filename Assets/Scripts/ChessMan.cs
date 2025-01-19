@@ -1,3 +1,4 @@
+
 using daw;
 using System.Collections;
 using System.Collections.Generic;
@@ -80,9 +81,18 @@ public class ChessMan : MonoBehaviour
 
     private void OnMouseUp()
     {
-        DestroyMovePlates();
 
-        InitiateMovePlates();
+
+
+
+        
+            
+            DestroyMovePlates();
+
+            
+            InitiateMovePlates();
+        
+
     }
 
     public void DestroyMovePlates()
